@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   count: 0,
+  color: 'rgb(0, 180, 0)',
 };
 
 export const counterSlice = createSlice({

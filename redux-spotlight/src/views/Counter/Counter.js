@@ -7,10 +7,11 @@ const Counter = () => {
   // a value from
   // the state.
   const count = useSelector((state) => state.counter.count);
+  const color = useSelector((state) => state.counter.color);
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div style={{ backgroundColor: color }}>
       <button
         aria-label="Decrement value"
         onClick={() => {
