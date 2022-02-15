@@ -14,6 +14,9 @@ export const counterSlice = createSlice({
       //This is describing the mutation to the state
       state.count += 1;
     },
+    doubleIncrement: (state) => {
+      state.count = state.count * 2;
+    },
     decrement: (state) => {
       state.count -= 1;
     },
@@ -23,7 +26,8 @@ export const counterSlice = createSlice({
   },
 });
 
-export const { increment, decrement, reset } = counterSlice.actions;
+export const { increment, decrement, reset, doubleIncrement } =
+  counterSlice.actions;
 
 //Export the reducer function from the slice
 export default counterSlice.reducer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { decrement, increment, reset } from './counterSlice';
+import { decrement, increment, reset, doubleIncrement } from './counterSlice';
 
 const Counter = () => {
   // The function below is called a selector and allows us to select
@@ -35,6 +35,7 @@ const Counter = () => {
       >
         Reset
       </button>
+      <button onClick={() => dispatch(doubleIncrement())}>Double</button>
     </div>
   );
 };
